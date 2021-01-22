@@ -34,11 +34,13 @@ public class DispatcherServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         scanPackageZxw("com.ssm");
         instanceZxw();
+        //asedgiasugdhiausg
         doAutoWired();
         //super.init(config);
     }
 
     private void doAutoWired() {
+        System.out.println("");
     }
 
     private void instanceZxw() {
