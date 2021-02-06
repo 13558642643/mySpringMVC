@@ -24,12 +24,13 @@ public class TestController {
     @ZxwAutowired("zxwService")
     private TestService testService;
 
-
+    @ZxwRequestMapping("/query")
     public void query(HttpServletResponse response, HttpServletRequest request,
-                      @ZxwRequestParam("name") String name){
+                      @ZxwRequestParam("name") String name,@ZxwRequestParam("age") String age){
         try {
             PrintWriter pw = response.getWriter();
             String msg = testService.getMsg(name);
+            msg += age;
             pw.write(msg);
 
         } catch (IOException e) {

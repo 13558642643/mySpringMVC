@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * @date : 2021-01-22 10:01
  * @Description :
  */
-@Target(ElementType.TYPE)
+@Target({ElementType.TYPE,ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface ZxwRequestMapping {
